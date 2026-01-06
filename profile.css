@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+.profile_container {
+    --brown: #786450;
+    background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+
+    .profile {
+        height: 320px;
+        width: 320px;
+        background: #fff;
+        display: flex;
+        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .left {
+        width: 200px;
+        .image {
+            position: relative;
+            height: 70px;
+            width: 70px;
+            margin: 38px auto 0 auto;
+            .circle1 {
+                position: absolute;
+                height: 76px;
+                width: 76px;
+                top: -3px;
+                left: -3px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                border-width: 1px;
+                border-style: solid;
+                border-color: var(--brown) var(--brown) var(--brown) transparent;
+                transition: all 2s ease-in-out;
+            }
+            .circle2 {
+                position: absolute;
+                height: 82px;
+                width: 82px;
+                top: -6px;
+                left: -6px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                border-width: 1px;
+                border-style: solid;
+                border-color: var(--brown) transparent var(--brown) var(--brown);
+                transition: all 2s ease-in-out;
+            }
+            img {
+                border-radius: 50%;
+            }
+
+            &:hover {
+                cursor: pointer;
+                .circle1 {
+                    transform: rotate(360deg);
+                }
+                .circle2 {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+        .name {
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .job {
+            font-size: 11px;
+            line-height: 15px;
+        }
+        .actions {
+            margin-top: 33px;
+            .btn {
+                display: block;
+                width: 120px;
+                height: 30px;
+                margin: 0 auto 10px auto;
+                background: none;
+                border: 1px solid var(--brown);
+                border-radius: 15px;
+                font-size: 12px;
+                font-weight: 600;
+                box-sizing: border-box;
+                color: var(--brown);
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    background: #786450;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .right {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1px;
+        .box {
+            background: #f5e8df;
+            flex: 1;
+            padding-top: 28px;
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                background-color: #e1cfc2;
+            }
+            span {
+                display: block;
+            }
+            .value {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .field {
+                font-size: 11px;
+            }
+        }
+    }
+}

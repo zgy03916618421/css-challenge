@@ -1,0 +1,9 @@
+# Ignore Node.js modules
+node_modules/
+
+# Ignore common OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
