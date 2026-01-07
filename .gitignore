@@ -7,3 +7,6 @@ Thumbs.db
 
 # Ignore logs
 *.log
+
+# Ignore compiled css
+css/

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --port=3000"
+    "start": "concurrently \"npm run sass:watch\" \"npm run live-server\"",
+    "sass:watch": "sass --watch scss:css",
+    "live-server": "live-server --port=3000 --ignore=**/scss/**,**/.git/**,**/node_modules/**"
   },
   "keywords": [],
   "author": "",
