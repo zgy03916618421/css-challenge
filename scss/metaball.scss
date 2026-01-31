@@ -1,5 +1,6 @@
 .metaball_item {
     background: #000;
+    filter: contrast(25);
 }
 .center {
     position: absolute;
@@ -40,6 +41,34 @@
                 s
                 infinite;
             filter: blur(5px);
+        }
+    }
+}
+@for $i from 1 through 8 {
+    .sparkle-#{$i} {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: (7 + $i) + px;
+        height: (7 + $i) + px;
+        transform: rotate((random(300)) + deg);
+        &:after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: (7 + $i) + px;
+            height: (7 + $i) + px;
+            background: #fff;
+            border-radius: 50%;
+            transform-origin: (60 - $i * 2) + px (60 - $i * 2) + px;
+            animation: rotate
+                (3.5 + $i / 5) +
+                s
+                ease-in-out
+                ($i / 5) +
+                s
+                infinite;
+            filter: blur(3px);
         }
     }
 }
